@@ -19,4 +19,12 @@ describe Account do
 
   end
 
+  describe '#withdraw' do
+    it 'Client can withdraw amount from account' do
+      account.deposit(2000)
+      account.withdraw(500)
+      expect(account.balance).to eq (1500)
+    end
+  end
+
 end
