@@ -1,7 +1,26 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/somayeh/Projects/Bank-teck-test/spec/account_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        0,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/somayeh/Projects/Bank-teck-test/lib/account.rb": [
+
+      ]
     },
-    "timestamp": 1524483840
+    "timestamp": 1524486319
   }
 }
