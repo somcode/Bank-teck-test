@@ -3,7 +3,6 @@
     "coverage": {
       "/Users/somayeh/Projects/Bank-teck-test/spec/account_spec.rb": [
         1,
-        null,
         1,
         null,
         3,
@@ -23,15 +22,11 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "/Users/somayeh/Projects/Bank-teck-test/lib/account.rb": [
+        1,
+        null,
         1,
         null,
         1,
@@ -39,12 +34,12 @@
         null,
         null,
         1,
-        null,
+        1,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1524492149
+    "timestamp": 1524492658
   }
 }
