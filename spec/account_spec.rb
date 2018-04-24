@@ -19,15 +19,15 @@ describe Account do
 
   end
 
-  describe '#withdraw' do
-    it 'Client can withdraw amount from account' do
+  describe '#withdrawl' do
+    it 'Client can withdrawl amount from account' do
       account.deposit(2000)
-      account.withdraw(500)
+      account.withdrawl(500)
       expect(account.balance).to eq (1500)
     end
 
-    it 'Raise error for withdraw if amount is more than balance' do
-      expect { account.withdraw(20) }.to raise_error "You don't have enough balance"
+    it 'Raise error for withdrawl if amount is more than balance' do
+      expect { account.withdrawl(20) }.to raise_error "You don't have enough balance"
     end
 
   end
