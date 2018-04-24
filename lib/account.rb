@@ -15,6 +15,7 @@ class Account
   def withdrawl(amount, date = get_date)
     raise "You don't have enough balance" if amount > @balance
     @balance -= amount
+    @transactions << { date: date, credit: " ", debit: amount , balance: @balance }
   end
 
   private
