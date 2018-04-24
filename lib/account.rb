@@ -7,12 +7,12 @@ class Account
     @transactions = []
   end
 
-  def deposit(amount)
+  def deposit(amount, date = get_date)
     @balance += amount
-    @transactions << { :credit => amount }
+    @transactions << { date: date, credit: amount, debit: " " , balance: @balance }
   end
 
-  def withdrawl(amount)
+  def withdrawl(amount, date)
     raise "You don't have enough balance" if amount > @balance
     @balance -= amount
   end
