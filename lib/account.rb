@@ -4,6 +4,7 @@ class Account
 
   def initialize(balance = 0)
     @balance = balance
+    @transactions = []
   end
 
   def deposit(amount)
@@ -13,6 +14,13 @@ class Account
   def withdrawl(amount)
     raise "You don't have enough balance" if amount > @balance
     @balance -= amount
+  end
+
+  private
+
+  def get_date
+    date = Time.now
+    date.strftime("%m/%d/%Y")
   end
 
 end
