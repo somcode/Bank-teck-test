@@ -9,7 +9,7 @@ describe Print do
 
   describe '#print_body' do
     it 'Responds to print method with one argument' do
-      expect(subject).to respond_to(:print).with(1).argument
+      expect(subject).to respond_to(:print_body).with(1).argument
     end
 
     it 'Print the transaction include date, credit, debit, balance' do

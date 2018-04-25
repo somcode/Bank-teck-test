@@ -4,6 +4,8 @@ class Print
   end
 
   def print_body(transactions)
-
+    transactions.reverse.each do |payment|
+      puts payment
+    end
   end
 end
