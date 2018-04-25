@@ -2,7 +2,6 @@ require 'account'
 describe Account do
   subject(:account) { described_class.new }
   subject(:account1) { described_class.new(1000) }
-  let(:date) { double() }
   date = Date.new(2018,4,3)
   date1 = Date.new(2018,4,14)
 
@@ -43,11 +42,5 @@ describe Account do
       expect(account1.transactions).to eq(["2018-04-03 ||  || 800 || 200 "])
     end
   end
-
-  describe '#print' do
-    it 'Print header for transactions' do
-      expect{ account.print_header }.to output(" date || credit || debit || balance \n").to_stdout
-    end
-  end 
 
 end
