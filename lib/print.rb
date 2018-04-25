@@ -4,6 +4,6 @@ class Print
   end
 
   def print_body(transactions)
-    
+
   end
 end
