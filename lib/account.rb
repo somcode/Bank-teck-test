@@ -9,20 +9,20 @@ class Account
 
   def deposit(amount, date = get_date)
     @balance += amount
-    @transactions << { date: date, credit: amount, debit: " " , balance: @balance }
+    @transactions << "#{date} || #{amount} ||  || #{@balance} "
   end
 
   def withdrawl(amount, date = get_date)
     raise "You don't have enough balance" if amount > @balance
     @balance -= amount
-    @transactions << { date: date, credit: " ", debit: amount , balance: @balance }
+    @transactions << "#{date} ||  || #{amount} || #{@balance} "
   end
 
   private
 
   def get_date
     date = Time.now
-    date.strftime("%m/%d/%Y")
+    date.strftime("%d/%m/%Y")
   end
 
 end
