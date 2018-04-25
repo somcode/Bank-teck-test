@@ -43,5 +43,11 @@ describe Account do
       expect(account1.transactions).to eq(["2018-04-03 ||  || 800 || 200 "])
     end
   end
-  
+
+  describe '#print' do
+    it 'Print header for transactions' do
+      expect{ account.print_header }.to output(" date || credit || debit || balance \n").to_stdout
+    end
+  end 
+
 end
