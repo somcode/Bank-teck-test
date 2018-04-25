@@ -1,6 +1,7 @@
 class Print
-  def print_header
-    puts " date || credit || debit || balance "
+  def print(transactions)
+    print_header
+    print_body(transactions)
   end
 
   def print_body(transactions)
@@ -8,4 +9,9 @@ class Print
       puts payment
     end
   end
+
+  def print_header
+    puts " date || credit || debit || balance "
+  end
+
 end
