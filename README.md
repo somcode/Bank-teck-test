@@ -106,3 +106,5 @@ Somayehs-MacBook-Pro:Bank-teck-test somayeh$ irb
  => ["26/04/2018 ||  || 500.00 || 2500.00 ", "13/01/2012 || 2000.00 ||  || 3000.00 ", "10/01/2012 || 1000.00 ||  || 1000.00 "]
 2.4.1 :015 >
 ```
+## Run all tests in command line
+<img width="531" alt="screen shot 2018-04-26 at 16 30 07" src="https://user-images.githubusercontent.com/34063826/39315686-318b010e-496f-11e8-971b-68f69c4651d7.png">
