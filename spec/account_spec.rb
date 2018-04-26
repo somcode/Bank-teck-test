@@ -4,6 +4,7 @@ describe Account do
   subject(:account1) { described_class.new(1000) }
   date = Date.new(2018,4,3)
   date1 = Date.new(2018,4,14)
+  date3 = Date.today.strftime("%d/%m/%Y")
 
   describe '#deposit' do
     it 'Responds to deposit method' do
@@ -17,6 +18,10 @@ describe Account do
     it 'Client can make a deposit to account' do
       account.deposit(1000, date)
       expect(account.balance).to eq(1000)
+    end
+
+    it "Set the date to today's date by default if you don't pass the date" do
+        expect(account.deposit(500)).to eq("#{date3} || 500.00 ||  || 500.00 ")
     end
 
     it 'After making deposit return date, credit and balance' do
@@ -33,6 +38,10 @@ describe Account do
 
     it 'Raise error for withdrawl if amount is more than balance' do
       expect { account.withdrawl(20, date) }.to raise_error "You don't have enough balance"
+    end
+
+    it "Set the date to today's date by default if you don't pass the date" do
+        expect(account1.withdrawl(800)).to eq("#{date3} ||  || 800.00 || 200.00 ")
     end
 
     it 'After making withdrawl return date, debit and balance' do
