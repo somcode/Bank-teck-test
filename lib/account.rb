@@ -3,18 +3,18 @@ class Account
 
   def initialize(balance = 0)
     @balance = balance
-    @transactions = []
   end
 
   def deposit(amount, date = get_date)
     @balance += amount
-    @transactions << "#{date} || #{convert_decimal(amount)} ||  || #{convert_decimal(@balance)} "
+    "#{date} || #{convert_decimal(amount)} ||  || #{convert_decimal(@balance)} "
+
   end
 
   def withdrawl(amount, date = get_date)
     raise "You don't have enough balance" if amount > @balance
     @balance -= amount
-    @transactions << "#{date} ||  || #{convert_decimal(amount)} || #{convert_decimal(@balance)} "
+    "#{date} ||  || #{convert_decimal(amount)} || #{convert_decimal(@balance)} "
   end
 
   private
