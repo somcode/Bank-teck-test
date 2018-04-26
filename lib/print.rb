@@ -9,7 +9,7 @@ class Print
       puts payment
     end
   end
-
+  
   def print_header
     puts " date || credit || debit || balance "
   end

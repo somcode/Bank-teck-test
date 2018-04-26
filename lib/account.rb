@@ -8,7 +8,6 @@ class Account
   def deposit(amount, date = get_date)
     @balance += amount
     "#{date} || #{convert_decimal(amount)} ||  || #{convert_decimal(@balance)} "
-
   end
 
   def withdrawl(amount, date = get_date)
