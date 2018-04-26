@@ -19,10 +19,8 @@ describe Account do
       expect(account.balance).to eq(1000)
     end
 
-    it 'After making deposit add credit to transactions array' do
-      account.deposit(500, date)
-      expect(account.transactions).to eq(["2018-04-03 || 500 ||  || 500 "])
-
+    it 'After making deposit return date, credit and balance' do
+      expect(account.deposit(500, date)).to eq("2018-04-03 || 500.00 ||  || 500.00 ")
     end
   end
 
@@ -37,9 +35,8 @@ describe Account do
       expect { account.withdrawl(20, date) }.to raise_error "You don't have enough balance"
     end
 
-    it 'After making withdrawl add debit to transactions array' do
-      account1.withdrawl(800, date)
-      expect(account1.transactions).to eq(["2018-04-03 ||  || 800 || 200 "])
+    it 'After making withdrawl return date, debit and balance' do
+      expect(account1.withdrawl(800, date)).to eq("2018-04-03 ||  || 800.00 || 200.00 ")
     end
   end
 
