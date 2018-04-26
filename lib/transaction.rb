@@ -8,5 +8,4 @@ class Transaction
   def add(transaction)
     @transactions << transaction
   end
-
 end

@@ -5,26 +5,25 @@ class Account
     @balance = balance
   end
 
-  def deposit(amount, date = get_date)
+  def deposit(amount, date = check_date)
     @balance += amount
-    "#{date} || #{convert_decimal(amount)} ||  || #{convert_decimal(@balance)} "
+    "#{date} || #{convert_decimal(amount)} ||  || #{convert_decimal(@balance)}"
   end
 
-  def withdrawl(amount, date = get_date)
+  def withdrawl(amount, date = check_date)
     raise "You don't have enough balance" if amount > @balance
     @balance -= amount
-    "#{date} ||  || #{convert_decimal(amount)} || #{convert_decimal(@balance)} "
+    "#{date} ||  || #{convert_decimal(amount)} || #{convert_decimal(@balance)}"
   end
 
   private
 
-  def get_date
+  def check_date
     date = Time.now
-    date.strftime("%d/%m/%Y")
+    date.strftime('%d/%m/%Y')
   end
 
   def convert_decimal(amount)
     '%.2f' % amount
   end
-
 end
