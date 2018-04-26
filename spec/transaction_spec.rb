@@ -1,3 +1,4 @@
+require 'transaction'
 describe Transaction do
   describe '#add' do
     context 'After each transaction' do
